@@ -3,8 +3,8 @@
   become: true 
   tasks:
     - name: Install the latest version of Apache
-      ansible.builtin.yum:
-        name: httpd
+      ansible.builtin.apt:
+        name: apache2
         state: latest
        
     - name: Start service httpd, if not started
